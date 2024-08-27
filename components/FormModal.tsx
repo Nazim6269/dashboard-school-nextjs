@@ -1,6 +1,12 @@
-import React from 'react';
-
-const FormModal = () => {
+const FormModal = ({
+  table,
+  type,
+  data,
+}: {
+  table?: string;
+  type?: string;
+  data?: {};
+}) => {
   return <div>FormModal</div>;
 };
 
