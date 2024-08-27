@@ -112,3 +112,50 @@ export const menuItems = [
     ],
   },
 ];
+
+export const countChartData = [
+  {
+    name: 'Boys',
+    count: 53,
+    fill: '#fae27c',
+  },
+
+  {
+    name: 'Girls',
+    count: 47,
+    fill: '#cfceff',
+  },
+  {
+    name: 'Total',
+    count: 100,
+    fill: '#fff',
+  },
+];
+
+export const barChartData = [
+  {
+    name: 'Sunday',
+    present: 77,
+    absent: 23,
+  },
+  {
+    name: 'Monday',
+    present: 59,
+    absent: 41,
+  },
+  {
+    name: 'Tuesday',
+    present: 76,
+    absent: 34,
+  },
+  {
+    name: 'Wednesday',
+    present: 80,
+    absent: 20,
+  },
+  {
+    name: 'Thrusday',
+    present: 54,
+    absent: 46,
+  },
+];
