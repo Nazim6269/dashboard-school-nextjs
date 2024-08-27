@@ -37,7 +37,7 @@ const AttendenceChart = () => {
             tickLine={false}
           />
           <YAxis axisLine={false} tick={{ fill: '#d1d5db' }} tickLine={false} />
-          <Tooltip contentStyle={{ borderRadius: '10px' }} />
+          <Tooltip contentStyle={{ borderRadius: '10px', border: 'none' }} />
           <Legend
             align="left"
             verticalAlign="top"
