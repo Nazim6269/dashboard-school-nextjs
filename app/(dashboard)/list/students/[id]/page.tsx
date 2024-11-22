@@ -1,8 +1,8 @@
-import Announcements from '@/components/Announcements';
-import BigCalendar from '@/components/BigCalendar';
-import Performance from '@/components/Performance';
-import Image from 'next/image';
-import Link from 'next/link';
+import Announcements from "@/components/Announcements";
+import BigCalendar from "@/components/BigCalendar";
+import Performance from "@/components/Performance";
+import Image from "next/image";
+import Link from "next/link";
 
 const SingleStudentPage = () => {
   return (
@@ -121,7 +121,10 @@ const SingleStudentPage = () => {
             <Link className="p-3 rounded-md bg-nazimSkyLight" href="/">
               Student&apos;s Lessons
             </Link>
-            <Link className="p-3 rounded-md bg-nazimPurpleLight" href="/">
+            <Link
+              className="p-3 rounded-md bg-nazimPurpleLight"
+              href={`/list/teachers?classId=${2}`}
+            >
               Student&apos;s Teachers
             </Link>
             <Link className="p-3 rounded-md bg-pink-50" href="/">
