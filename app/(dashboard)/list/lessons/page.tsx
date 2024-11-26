@@ -69,18 +69,22 @@ const LessonListPage = async ({
       switch (key) {
         case "classId":
           query.classId = parseInt(value);
+
         case "teacherId":
           query.teacherId = value;
-        case "search":
-          query.name = { contains: value, mode: "insensitive" };
-          break;
 
+        case "search":
+          query.OR = [
+            { subject: { name: { contains: value, mode: "insensitive" } } },
+            { teacher: { name: { contains: value, mode: "insensitive" } } },
+          ];
+          break;
         default:
           break;
       }
     }
   }
-
+  console.log(query);
   //DB query
   const [lessonsData, count] = await prisma.$transaction([
     prisma.lesson.findMany({
