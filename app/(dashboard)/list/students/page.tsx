@@ -66,7 +66,7 @@ const renderRow = (item: StudentList) => (
     <td className="hidden md:table-cell">{item.address}</td>
     <td>
       <div className="flex items-center gap-2">
-        <Link href={`/list/teachers/${item.id}`}>
+        <Link href={`/list/students/${item.id}`}>
           <button className="w-7 h-7 flex items-center justify-center rounded-full bg-nazimSky">
             <Image src="/view.png" alt="" width={16} height={16} />
           </button>
@@ -91,7 +91,6 @@ const StudentList = async ({
   const p = page ? parseInt(page) : 1;
 
   const query: Prisma.StudentWhereInput = {};
-  //TODO: Search functionality didn't work
 
   for (const [key, value] of Object.entries(queryParams)) {
     if (value !== undefined) {
@@ -107,6 +106,8 @@ const StudentList = async ({
           break;
         case "search":
           query.name = { contains: value, mode: "insensitive" };
+        default:
+          break;
       }
     }
   }
